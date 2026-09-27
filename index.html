@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Keke Xia | Chief Scientist in Plant Spatial Omics & Genome Writing</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for clean UI, JetBrains Mono for tech touch -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bio: {
+                            dark: '#060814',      // Obsidian Black Background
+                            slate: '#121726',     // Metallic Deep Slate
+                            gold: '#D4B26F',      // Technological Gold (Primary)
+                            rose: '#E0A995',      // Premium Rose Gold (Highlight)
+                            glow: '#C49B55',      // Dark Golden Amber Glow
+                            accent: '#F5E6D3'     // Champagne Ivory Accent
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px -3px rgba(212, 178, 111, 0.45)',
+                        'glow-lg': '0 0 30px -5px rgba(224, 169, 149, 0.6)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #060814;
+            color: #F1F5F9;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060814;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #121726;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4B26F;
+        }
+        /* Hide scrollbar utility */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Custom animation for fading slide effects */
+        .fade-slide {
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+    </style>
+</head>
+<body class="selection:bg-bio-gold selection:text-bio-dark overflow-x-hidden">
+
+    <!-- Glowing Background Decorative Orbs (Optimized with amber, rose, and champagne light) -->
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-bio-gold/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="absolute top-1/3 right-10 w-[600px] h-[600px] bg-bio-rose/5 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-10 left-10 w-[450px] h-[450px] bg-bio-glow/5 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+
+    <!-- Navigation Header -->
+    <nav class="sticky top-0 z-50 bg-bio-dark/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-bio-gold to-bio-rose flex items-center justify-center shadow-glow">
+                        <i class="fa-solid fa-dna text-bio-dark text-lg animate-pulse"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-white via-slate-100 to-bio-rose bg-clip-text text-transparent">XIA Keke</span>
+                        <p class="text-[9px] font-mono tracking-widest text-bio-gold uppercase">Plant Spatiotemporal Genomics Center</p>
+                    </div>
+                </div>
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#profile" class="hover:text-bio-rose transition-colors text-slate-300">Profile</a>
+                    <a href="#research" class="hover:text-bio-rose transition-colors text-slate-300">Research</a>
+                    <a href="#system13311" class="hover:text-bio-rose transition-colors text-slate-300">133111ips System</a>
+                    <a href="#activities" class="hover:text-bio-rose transition-colors text-slate-300">Team Gallery</a>
+                    <a href="#mentorship" class="hover:text-bio-rose transition-colors text-slate-300">Mentorship</a>
+                    <a href="#milestones" class="hover:text-bio-rose transition-colors text-slate-300">Milestones</a>
+                    <a href="#analytics" class="hover:text-bio-rose transition-colors text-slate-300">Analytics</a>
+                </div>
+                <!-- Contact Button -->
+                <div class="hidden lg:block">
+                    <a href="mailto:xiakeke@genomics.cn" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-xs font-semibold text-white rounded-lg group bg-gradient-to-br from-bio-gold to-bio-rose group-hover:from-bio-gold group-hover:to-bio-rose hover:text-white transition-all duration-300">
+                        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-bio-dark rounded-md group-hover:bg-opacity-0">
+                            <i class="fa-regular fa-paper-plane mr-2"></i>Get In Touch
+                        </span>
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-bio-rose focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-bio-dark/95 border-b border-white/5 px-4 pt-2 pb-6 space-y-3">
+            <a href="#profile" class="block py-2 text-slate-300 hover:text-bio-rose">Profile</a>
+            <a href="#research" class="block py-2 text-slate-300 hover:text-bio-rose">Research Directions</a>
+            <a href="#system13311" class="block py-2 text-slate-300 hover:text-bio-rose">133111ips System</a>
+            <a href="#activities" class="block py-2 text-slate-300 hover:text-bio-rose">Team Gallery</a>
+            <a href="#mentorship" class="block py-2 text-slate-300 hover:text-bio-rose">Mentorship</a>
+            <a href="#milestones" class="block py-2 text-slate-300 hover:text-bio-rose">Milestones</a>
+            <a href="#analytics" class="block py-2 text-slate-300 hover:text-bio-rose">Analytics</a>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: PROFILE AREA -->
+    <section id="profile" class="relative pt-8 pb-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Profile Left: Interactive High-Tech Real Image Avatar Holder -->
+                <div class="lg:col-span-5 flex flex-col items-center">
+                    <div class="relative w-80 h-96 group">
+                        <!-- Futuristic HUD frame around photo -->
+                        <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-bio-gold/30 via-transparent to-bio-rose/30 blur-lg group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute inset-0 rounded-2xl border border-bio-gold/30 bg-bio-slate/40 backdrop-blur-sm overflow-hidden flex flex-col justify-center items-center shadow-2xl">
+                            <!-- Science Lab Grid Background Overlay -->
+                            <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#D4B26F 1px, transparent 1px); background-size: 16px 16px;"></div>
+
+                            <!-- Profile Real Image Slot -->
+                            <div class="relative w-72 h-80 rounded-xl overflow-hidden border border-white/10 group-hover:border-bio-gold/50 transition-colors duration-300 bg-bio-dark">
+                                <img id="profile-avatar"
+                                     src="web_images/profile.jpg"
+                                     alt="Dr. Keke Xia"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x800/121726/d4b26f?text=Dr.+Keke+Xia'"
+                                     class="w-full h-full object-cover object-center transform scale-105 group-hover:scale-100 transition-transform duration-500">
+
+                                <!-- Hologram scan line effect -->
+                                <div class="absolute inset-x-0 h-0.5 bg-bio-rose/40 opacity-70 animate-[bounce_4s_infinite] pointer-events-none shadow-glow"></div>
+                            </div>
+                        </div>
+
+                        <!-- Mini Badges anchored to corners -->
+                        <div class="absolute -bottom-3 -right-3 bg-bio-dark border border-bio-gold/40 px-3 py-1.5 rounded-lg flex items-center space-x-1.5 shadow-glow">
+                            <span class="w-2 h-2 rounded-full bg-bio-gold animate-ping"></span>
+                            <span class="text-[10px] font-mono tracking-wider uppercase text-bio-rose">ONLINE // BGI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Right: Details & Highlights -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-bio-gold/10 border border-bio-gold/30 px-3 py-1 rounded-full">
+                        <i class="fa-solid fa-certificate text-bio-gold text-xs"></i>
+                        <span class="text-xs font-semibold text-bio-rose tracking-wider uppercase">GROUP LEADER</span>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                            <span class="block font-sans text-white">Dr. XIA Keke (夏科科)</span>
+                            <span class="block text-2xl sm:text-3xl font-medium mt-1 bg-gradient-to-r from-bio-gold to-bio-rose bg-clip-text text-transparent">
+                                Chief Scientist
+                            </span>
+                            <span class="block text-2xl sm:text-3xl font-medium mt-1 bg-gradient-to-r from-bio-gold to-bio-rose bg-clip-text text-transparent">
+                                Associate Research Fellow
+                            </span>
+                        </h1>
+                        <p class="text-sm font-mono text-slate-400 flex items-center space-x-2 pt-2">
+                            <i class="fa-solid fa-building-columns text-bio-gold"></i>
+                            <span>BGI Research | State Key Laboratory of Genome and Multi-omics Technologies</span>
+                        </p>
+                    </div>
+
+                    <!-- Short interactive bio quick list -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="bg-bio-slate/20 border border-white/5 p-4 rounded-xl flex items-start space-x-3">
+                            <div class="p-2 bg-bio-gold/10 rounded-lg text-bio-gold mt-1">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Email Address</h4>
+                                <div class="flex items-center space-x-2 mt-1">
+                                    <span id="email-text" class="text-sm font-mono text-white">xiakeke@genomics.cn</span>
+                                    <button onclick="copyToClipboard('xiakeke@genomics.cn', 'copy-email-icon')" class="text-slate-500 hover:text-bio-rose transition-colors">
+                                        <i id="copy-email-icon" class="fa-regular fa-copy text-xs"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-bio-slate/20 border border-white/5 p-4 rounded-xl flex items-start space-x-3">
+                            <div class="p-2 bg-bio-gold/10 rounded-lg text-bio-gold mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Mobile Phone</h4>
+                                <div class="flex items-center space-x-2 mt-1">
+                                    <span class="text-sm font-mono text-white">+86 15013809611</span>
+                                    <button onclick="copyToClipboard('+8615013809611', 'copy-phone-icon')" class="text-slate-500 hover:text-bio-rose transition-colors">
+                                        <i id="copy-phone-icon" class="fa-regular fa-copy text-xs"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research Philosophy Summary Block -->
+                    <div class="bg-gradient-to-r from-bio-slate/30 to-bio-slate/10 border-l-4 border-bio-gold p-5 rounded-r-xl">
+                        <h3 class="text-sm font-mono text-bio-gold uppercase tracking-wider mb-2">// MISSION STATEMENT</h3>
+                        <p class="text-slate-300 leading-relaxed text-sm font-medium">
+                            Cells are the fundamental units of life. Their precisely orchestrated processes of differentiation, development, and aging unfold into complex yet orderly life cycles, governed by intricate spatiotemporal regulatory principles, Cellular SpatioTemporal Dogma. Our group is dedicated to developing cutting-edge technologies for plant genomics—both "Reading" (e.g., single-cell and spatiotemporal multi-omics) and "Writing" (e.g., genome editing, synthesis, and automated systems). By integrating biotechnology (BT), information technology (IT), automation technology (AT), and artificial intelligence (AI), we now have an unprecedented opportunity to decode the cellular spatiotemporal dogma, bridge the knowledge gap between genotype and phenotype, and accelerate smart breeding for sustainable agriculture.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: RESEARCH DIRECTIONS & CORE STATEMENT -->
+    <section id="research" class="py-20 border-y border-white/5 bg-bio-slate/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Header & Slogan -->
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-mono tracking-widest text-bio-gold uppercase">// ACADEMIC FOCUS</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                    "Decoding the Cellular Spatiotemporal Dogma of Plant Development to Breed the Future"
+                </h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-bio-gold to-bio-rose mx-auto rounded-full"></div>
+                <p class="text-sm text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                    Leveraging high-resolution multi-omics big data at single-cell and spatiotemporal scales bridges the genotype-phenotype knowledge gap and bypasses conventional agricultural bottlenecks.
+                </p>
+            </div>
+
+            <!-- Deep dive introduction block with Auto-Carousel for 5 Achievements -->
+            <div class="bg-bio-dark/60 border border-white/5 rounded-2xl p-8 mb-16 relative overflow-hidden shadow-2xl">
+                <!-- Abstract glowing element inside -->
+                <div class="absolute -top-24 -right-24 w-48 h-48 bg-bio-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-4 text-slate-300 text-sm leading-relaxed">
+                        <h3 class="text-lg font-bold text-white flex items-center space-x-2">
+                            <i class="fa-solid fa-dna text-bio-gold animate-pulse"></i>
+                            <span>Achievements</span>
+                        </h3>
+                        <p>
+                            Consortium Leadership: <strong>Dr. XIA Keke</strong> acts as a core founding member of the <span class="text-bio-rose font-semibold">STOC Plant (Plant Spatiotemporal Omics Consortium)</span>, aligning with scientists worldwide to construct a comprehensive multi-species single-cell spatiotemporal developmental blueprint. Under his leadership, his team has successfully developed plant single-cell and spatial transcriptomics technologies and generated single-cell spatiotemporal transcriptomic atlases of Arabidopsis leaves, callus formation, shoot regeneration, seed germination, and rice seed development. Recently, together with scientists worldwide, he has launched the big science project, Wheat SpatioTemporal Atlas project (Wheat STA), constructing a comprehensive spatiotemporal single-cell atlas of wheat to safeguard wheat smart breeding.
+                        </p>
+                        <p>
+                            Smart Breeding Innovation: In the direction of genomic "Writing", he focuses on the research and development of gene editing, universal adapter, and cell fusion technologies to overcome the challenges of distant hybridization and grafting techniques. He is responsible for developing the gene editing technology for Phalaenopsis orchids and the creation of auto-luminescent tomatoes, tobacco, and orchids. He is currently developing an <span class="text-bio-rose font-semibold">automated plant gene manipulation system</span> and applications to achieve automated, intelligent, and digital operations such as tissue culture, genetic transformation, gene editing, screening, identification, and phenotypic sorting, which will significantly increase the efficiency of crop gene editing breeding, shorten the editing cycle, and save labor costs.
+                        </p>
+                        <p>
+                            In recent years, he has published 13 papers in journals such asc<em class="text-white font-semibold">Cell</em>, <em class="text-white font-semibold">Nature Genetics</em>, <em class="text-white font-semibold">Developmental Cell</em> and <em class="text-white font-semibold">PNAS</em>, and applied for 8 invention patents. His works were selected as one of the "Top Ten Advances in Chinese Life Sciences for 2022" and "Top 10 Science and Technology News in China for 2025".
+                        </p>
+                    </div>
+
+                    <!-- Right Column: Auto-Carousel for 6 Major Accomplishments -->
+                    <div class="lg:col-span-5 bg-bio-slate/40 border border-bio-gold/25 rounded-2xl p-6 shadow-glow relative min-h-[420px] flex flex-col justify-between overflow-hidden">
+
+                        <div class="relative flex-1">
+                            <!-- Carousel Slides -->
+                            <div id="achievement-slides">
+                                <!-- Achievement 1: 2022 Developmental Cell -->
+                                <div class="achievement-slide fade-slide opacity-100 transform translate-x-0 flex flex-col space-y-3">
+                                    <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10">
+                                        <img src="web_images/DC 2022.png" alt="Arabidopsis leaves" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Developmental+Cell+2022'" class="w-full h-full object-cover">
+                                        <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">2022 SPATIAL OMICS MILESTONE</div>
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white tracking-wide">Developing the First Single-cell Spatial Technology (scStereo-seq)</h4>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        Revealing region-specific cell subtypes and transcriptome profiling in Arabidopsis leaves using scStereo-seq.
+                                    </p>
+                                </div>
+
+                                <!-- Achievement 2: 2025 Cell -->
+                                <div class="achievement-slide fade-slide opacity-0 absolute top-0 left-0 w-full flex flex-col space-y-3 pointer-events-none">
+                                    <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10">
+                                        <img src="web_images/Cell regeneration 2025.png" alt="Plant Regeneration" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Cell+Regeneration+2025'" class="w-full h-full object-cover">
+                                        <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">2025 SINGLE-CELL OMICS LANDMARK</div>
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white tracking-wide">Constructing the Single-cell Landscape of Somatic Regeneration</h4>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        Unveiling time-resolved somatic reprogramming mechanisms of single plant somatic cells transitioning into complete plants.
+                                    </p>
+                                </div>
+
+                                <!-- Achievement 3: 2024 STOC Plant -->
+                                <div class="achievement-slide fade-slide opacity-0 absolute top-0 left-0 w-full flex flex-col space-y-3 pointer-events-none">
+                                    <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10">
+                                        <img src="web_images/STOC Plant.png" alt="Global science consortium" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=STOC+Plant+Consortium'" class="w-full h-full object-cover">
+                                        <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">2024 CONSORTIUM FOUNDING</div>
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white tracking-wide">STOC Plant Consortium Founded</h4>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        Establishing an open international academic exchange platform to reconstruct comprehensive predictive spatiotemporal atlases for plants.
+                                    </p>
+                                </div>
+
+                                <!-- Achievement 4: 2025 WSOC -->
+                                <div class="achievement-slide fade-slide opacity-0 absolute top-0 left-0 w-full flex flex-col space-y-3 pointer-events-none">
+                                    <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10">
+                                        <img src="web_images/Wheat STA.JPG" alt="Wheat field crops" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Nature+Genetics+2026'" class="w-full h-full object-cover">
+                                        <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">2025 BIG SCIENCE PROJECT</div>
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white tracking-wide">Launched the Wheat Spatiotemporal Atlas Project</h4>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        Developing a comprehensive spatiotemporal single-cell atlas of wheat
+to safeguard wheat breeding and agricultural sustainability.
+                                    </p>
+                                </div>
+
+                                <!-- Achievement 5: Auto-luminescent Plant-->
+                                <div class="achievement-slide fade-slide opacity-0 absolute top-0 left-0 w-full flex flex-col space-y-3 pointer-events-none">
+                                    <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10">
+                                        <img src="web_images/Auto-luminescent.png" alt="auto-luminescent plant" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Nature+Genetics+2026'" class="w-full h-full object-cover">
+                                        <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">2022 AUTO-LUMINESCENT PLANT</div>
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white tracking-wide">Developed the Auto-Luminescent Tomato and Orchid</h4>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        The auto‑luminescence of these plants is visible to the naked eye under dark conditions.
+                                    </p>
+                                </div>
+
+                                <!-- Achievement 6: Automated system-->
+                                <div class="achievement-slide fade-slide opacity-0 absolute top-0 left-0 w-full flex flex-col space-y-3 pointer-events-none">
+                                    <div class="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10">
+                                        <img src="web_images/Automated system.png" alt="Automated system" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Nature+Genetics+2026'" class="w-full h-full object-cover">
+                                        <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">2025 AUTOMATED CULTURING SYSTEM</div>
+                                    </div>
+                                    <h4 class="text-sm font-bold text-white tracking-wide">Developed the Automated Plant Gene Manipulation System</h4>
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        Automation of the entire process will greatly enhance throughput and minimize labor consumption.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Carousel Dots -->
+                        <div class="flex justify-center space-x-2 pt-4">
+                            <span class="achievement-dot w-2 h-2 rounded-full bg-bio-gold transition-colors duration-300 cursor-pointer" onclick="goToAchievementSlide(0)"></span>
+                            <span class="achievement-dot w-2 h-2 rounded-full bg-white/20 transition-colors duration-300 cursor-pointer" onclick="goToAchievementSlide(1)"></span>
+                            <span class="achievement-dot w-2 h-2 rounded-full bg-white/20 transition-colors duration-300 cursor-pointer" onclick="goToAchievementSlide(2)"></span>
+                            <span class="achievement-dot w-2 h-2 rounded-full bg-white/20 transition-colors duration-300 cursor-pointer" onclick="goToAchievementSlide(3)"></span>
+                            <span class="achievement-dot w-2 h-2 rounded-full bg-white/20 transition-colors duration-300 cursor-pointer" onclick="goToAchievementSlide(4)"></span>
+                            <span class="achievement-dot w-2 h-2 rounded-full bg-white/20 transition-colors duration-300 cursor-pointer" onclick="goToAchievementSlide(5)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The 4 Research Directions Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Card 1: Organ Regeneration & Adaptation -->
+                <div class="group bg-bio-slate/20 border border-white/5 hover:border-bio-gold/30 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-glow flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 bg-bio-gold/10 rounded-xl flex items-center justify-center text-bio-gold group-hover:bg-bio-gold group-hover:text-bio-dark transition-all duration-300">
+                                <i class="fa-solid fa-seedling text-xl"></i>
+                            </div>
+                            <span class="text-[10px] font-mono text-slate-500">// DIR_01</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-bio-rose transition-colors">Plant Organ Regeneration, Development & Adaptation</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Employing the cutting-edge single-cell and spatiotemporal multi-omics technologies to investigate cell fate transition states from dedifferentiation into callus, somatic embryos, and organ regeneration. Bridging cellular signaling during organogenesis with systemic environment feedback mechanisms to establish robust tissue recovery.
+                        </p>
+                    </div>
+
+                    <!-- Replaceable Real Image Placeholder (16:9 aspect ratio) -->
+                    <div class="mt-6 w-full aspect-video rounded-xl border border-white/5 overflow-hidden relative">
+                        <img src="web_images/1 Organ regeneration.jpg"
+                             alt="Plant Organ Regeneration"
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 text-[9px] bg-bio-dark/70 backdrop-blur-md border border-white/10 px-2 py-0.5 rounded font-mono text-slate-400 uppercase">Organogenesis</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Deciphering the Cellular Spatiotemporal Dogma -->
+                <div class="group bg-bio-slate/20 border border-white/5 hover:border-bio-gold/30 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-glow flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 bg-bio-gold/10 rounded-xl flex items-center justify-center text-bio-gold group-hover:bg-bio-gold group-hover:text-bio-dark transition-all duration-300">
+                                <i class="fa-solid fa-circle-nodes text-xl"></i>
+                            </div>
+                            <span class="text-[10px] font-mono text-slate-500">// DIR_02</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-bio-rose transition-colors">Deciphering the Cellular Spatiotemporal Dogma</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Employing high-resolution spatial transcriptomics (scStereo-seq) to profile plant species and distinct organ types. We track single-cell fate transition timelines and isolate critical transitional microenvironments and localized cell communications.
+                        </p>
+                    </div>
+
+                    <!-- Replaceable Real Image Placeholder (16:9 aspect ratio) -->
+                    <div class="mt-6 w-full aspect-video rounded-xl border border-white/5 overflow-hidden relative">
+                        <img src="web_images/2 Cellular spatiotemporal dogma.jpg"
+                             alt="Spatiotemporal Dogma"
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 text-[9px] bg-bio-dark/70 backdrop-blur-md border border-white/10 px-2 py-0.5 rounded font-mono text-slate-400 uppercase">Plant Lifeycle</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Design & Synthesis of Plant Artificial Chromosomes -->
+                <div class="group bg-bio-slate/20 border border-white/5 hover:border-bio-gold/30 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-glow flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 bg-bio-gold/10 rounded-xl flex items-center justify-center text-bio-gold group-hover:bg-bio-gold group-hover:text-bio-dark transition-all duration-300">
+                                <i class="fa-solid fa-dna text-xl"></i>
+                            </div>
+                            <span class="text-[10px] font-mono text-slate-500">// DIR_03</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-bio-rose transition-colors">Design & Synthesis of Plant Artificial Chromosomes</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Developing advanced large scale artificial synthetic chromosomes technologies in Arabidopsis, including the design, synthesis, and delivering, integrating complex multigenic trait cascades. This bypasses structural hybrid barriers and allows multi-gene agricultural adaptation.
+                        </p>
+                    </div>
+
+                    <!-- Replaceable Real Image Placeholder (16:9 aspect ratio) -->
+                    <div class="mt-6 w-full aspect-video rounded-xl border border-white/5 overflow-hidden relative">
+                        <img src="web_images/3 Artifical chromosome.png"
+                             alt="Artificial Chromosomes"
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 text-[9px] bg-bio-dark/70 backdrop-blur-md border border-white/10 px-2 py-0.5 rounded font-mono text-slate-400 uppercase">Somatic Cell Hybridization</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: High-Throughput Automated Plant Genetic Manipulation Equipment -->
+                <div class="group bg-bio-slate/20 border border-white/5 hover:border-bio-gold/30 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-glow flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 bg-bio-gold/10 rounded-xl flex items-center justify-center text-bio-gold group-hover:bg-bio-gold group-hover:text-bio-dark transition-all duration-300">
+                                <i class="fa-solid fa-brain text-xl"></i>
+                            </div>
+                            <span class="text-[10px] font-mono text-slate-500">// DIR_04</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-bio-rose transition-colors">High-Throughput Automated Plant Genetic Equipment</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Developing integrated high-throughput automated plant manipulation hardware. Scaling up tissue culture, infection, CRISPR transfections, and molecular genotyping arrays to systematically trim labor and breeding times.
+                        </p>
+                    </div>
+
+                    <!-- Replaceable Real Image Placeholder (16:9 aspect ratio) -->
+                    <div class="mt-6 w-full aspect-video rounded-xl border border-white/5 overflow-hidden relative">
+                        <img src="web_images/4 Automated genetic manipulation.png"
+                             alt="Automated Plant Equipment"
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 text-[9px] bg-bio-dark/70 backdrop-blur-md border border-white/10 px-2 py-0.5 rounded font-mono text-slate-400 uppercase">Automated Tissue Culture</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SUBSECTION: 133111ips HIERARCHY -->
+    <section id="system13311" class="py-20 relative bg-bio-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-mono tracking-widest text-bio-gold uppercase">// INNOVATIVE BREEDING SCHEME</span>
+                <h2 class="text-3xl font-extrabold text-white">The "133111ips" Smart Agricultural Breeding System</h2>
+                <p class="text-xs text-slate-400">
+                    A multi-tiered paradigm leveraging engineering automation, AI modeling, and genomic writing to solve agricultural breeding constraints at scale. Click segments to explore details.
+                </p>
+            </div>
+
+            <!-- Interative SVG / Web UI element for 133111ips -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Selector List Column -->
+                <div class="lg:col-span-5 space-y-3">
+                    <button onclick="switchIpsSegment('sc1')" id="btn-sc1" class="ips-btn w-full text-left p-4 rounded-xl border border-bio-gold/30 bg-bio-slate/40 hover:bg-bio-slate/60 transition-all flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-lg bg-bio-gold text-bio-dark flex items-center justify-center font-extrabold text-lg">1</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Complete Reference Map</h4>
+                            <p class="text-[11px] text-bio-rose font-mono">1 Standard Reference Crop Atlas</p>
+                        </div>
+                    </button>
+
+                    <button onclick="switchIpsSegment('sc2')" id="btn-sc2" class="ips-btn w-full text-left p-4 rounded-xl border border-white/5 bg-bio-slate/10 hover:bg-bio-slate/60 transition-all flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-lg bg-bio-gold/20 text-bio-gold flex items-center justify-center font-extrabold text-lg">3</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-300">Basic Lifecourse Rules</h4>
+                            <p class="text-[11px] text-slate-500 font-mono">Dogmas of Spatiotemporal Life</p>
+                        </div>
+                    </button>
+
+                    <button onclick="switchIpsSegment('sc3')" id="btn-sc3" class="ips-btn w-full text-left p-4 rounded-xl border border-white/5 bg-bio-slate/10 hover:bg-bio-slate/60 transition-all flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-lg bg-bio-gold/20 text-bio-gold flex items-center justify-center font-extrabold text-lg">3</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-300">Dimensions of Genomic Control</h4>
+                            <p class="text-[11px] text-slate-500 font-mono">Cell, Organ, Organism Engineering</p>
+                        </div>
+                    </button>
+
+                    <button onclick="switchIpsSegment('sc4')" id="btn-sc4" class="ips-btn w-full text-left p-4 rounded-xl border border-white/5 bg-bio-slate/10 hover:bg-bio-slate/60 transition-all flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-lg bg-bio-gold/20 text-bio-gold flex items-center justify-center font-extrabold text-lg">111</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-300">The 3 Automated Subsystems</h4>
+                            <p class="text-[11px] text-slate-500 font-mono">Manipulation, Phenotyping, Storage</p>
+                        </div>
+                    </button>
+
+                    <button onclick="switchIpsSegment('sc5')" id="btn-sc5" class="ips-btn w-full text-left p-4 rounded-xl border border-white/5 bg-bio-slate/10 hover:bg-bio-slate/60 transition-all flex items-center space-x-4">
+                        <div class="w-10 h-10 rounded-lg bg-bio-gold/20 text-bio-gold flex items-center justify-center font-extrabold text-lg">ips</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-300">Breeding Evaluation Index</h4>
+                            <p class="text-[11px] text-slate-500 font-mono">Super crop customized prediction index</p>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Detail Panel Column (Synchronized with dynamic background switching) -->
+                <div id="ips-detail-panel" class="lg:col-span-7 bg-bio-slate/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl relative min-h-[350px] flex flex-col justify-between shadow-2xl overflow-hidden transition-all duration-500">
+                    <!-- Background image container to sync switching -->
+                    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                        <img id="ips-bg-image" src="web_images/133111ips schematic.png" class="w-full h-full object-cover opacity-35 transition-opacity duration-500 ease-in-out filter blur-[2px]" alt="Backing Matrix">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bio-dark/90 via-bio-dark/40 to-transparent opacity-85"></div>
+                    </div>
+
+                    <div id="ips-content-display" class="space-y-6 relative z-10">
+                        <!-- Dynamic Content injected here -->
+                        <div class="space-y-4">
+                            <span class="text-xs font-mono text-bio-gold uppercase tracking-wider">// COMPONENT 1</span>
+                            <h3 class="text-2xl font-bold text-white">1 Complete Reference Crop Atlas</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                We utilize high-resolution life-omics technologies in single-cell, spatial, and temporal dimensions to establish a base blueprint of major crop systems. This incorporates standard multi-omics (genomics, transcriptomics, proteomics, metabolomics, epimutational landscapes) mapped under multiple environmental factors.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-400">
+                                <li class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-circle-check text-bio-gold"></i>
+                                    <span>5100+ global plant & animal genomes unlocked.</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-circle-check text-bio-gold"></i>
+                                    <span>Robust databases built across major cash and food crops.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Footprint Tag -->
+                    <div class="pt-6 border-t border-white/10 mt-6 flex justify-between items-center text-xs text-slate-400 relative z-10">
+                        <span>BGI Smart Agriculture Platform</span>
+                        <span class="font-mono text-bio-gold uppercase">Platform Active</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TEAM ACTIVITY CAROUSEL GALLERY (RECONFIGURED FOR FIXED HEIGHT AND STRETCH ALIGNMENT) -->
+    <section id="activities" class="py-20 border-t border-white/5 bg-bio-slate/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div class="space-y-3">
+                    <span class="text-xs font-mono tracking-widest text-bio-gold uppercase">// GLOBAL OUTREACH</span>
+                    <h2 class="text-3xl font-extrabold text-white font-sans">Team Footprint & Congress Workshops</h2>
+                    <p class="text-sm text-slate-400">Reviewing our recent host workshops and research presentations globally.</p>
+                </div>
+                <!-- Nav Arrows for Carousel -->
+                <div class="flex space-x-3 mt-4 md:mt-0">
+                    <button onclick="scrollGallery(-1)" class="w-12 h-12 rounded-full border border-white/10 hover:border-bio-gold/40 flex items-center justify-center text-slate-400 hover:text-bio-rose transition-colors bg-bio-slate/30">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="scrollGallery(1)" class="w-12 h-12 rounded-full border border-white/10 hover:border-bio-gold/40 flex items-center justify-center text-slate-400 hover:text-bio-rose transition-colors bg-bio-slate/30">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Slider Wrapper with Dynamic Equalizer Flex Constraints -->
+            <div id="gallery-container" class="flex items-stretch overflow-x-auto gap-6 pb-8 scroll-smooth no-scrollbar snap-x snap-mandatory">
+
+                <!-- Slide 1: STOC Plant 2026 (Photo link to be added) -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10 bg-bio-slate/40 flex items-center justify-center">
+                            <img src="web_images/STOC Plant 2026.PNG" alt="STOC Plant 2026 Perth" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"> -->
+                            <i class="fa-solid fa-camera text-slate-600 text-2xl"></i>
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">STOC PLANT 2026</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// ORGANIZER</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">STOC Plant 2026</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Organized the 3rd International Plant Spatiotemporal Omics Conference in Perth, Australia.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Perth, Australia</span>
+                        <span>Sept 2026</span>
+                    </div>
+                </div>
+
+                <!-- Slide 2: STOC GM 2026 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10 bg-bio-slate/40 flex items-center justify-center">
+                            <img src="web_images/STOC GM 2026.HEIC" alt="STOC GM 2026 Milan" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"> -->
+                            <i class="fa-solid fa-camera text-slate-600 text-2xl"></i>
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">STOC GM 2026</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// SPEAKER</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">STOC GM 2026</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                STOC Plant: Building the Plant Comprehensive Spatiotemporal Cellular Big Data to Drive Smart Breeding.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Milan, Italy</span>
+                        <span>Jun 2026</span>
+                    </div>
+                </div>
+
+                <!-- Slide 3: STOC Plant 2024 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <!-- Strict Fixed Aspect Ratio Block for Uniform Sizing -->
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/STOC Plant 2024.JPG" alt="STOC Plant 2024 Conference" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=STOC+Plant+2024'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">STOC PLANT 2024</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// ORGANIZER & SPEAKER</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">STOC Plant 2024</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                The 1st International Plant Spatiotemporal Omics Symposium in Shenzhen, China.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Shenzhen, China</span>
+                        <span>June 2024</span>
+                    </div>
+                </div>
+
+                <!-- Slide 2: IBC 2024 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/IBC 2024.jpg" alt="IBC 2024 Madrid" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=IBC+Madrid+2024'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">IBC 2024</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// HOST WORKSHOP</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">XX International Botanical Congress</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Organized the global workshop: "Spatiotemporal and Single-cell Multi-Omics in Plants" at IBC 2024 in Madrid, Spain.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Madrid, Spain</span>
+                        <span>July 2024</span>
+                    </div>
+                </div>
+
+                <!-- Slide 3: STOC Plant 2025 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/STOC Plant 2025.JPG" alt="STOC Plant 2025 Beijing" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=STOC+Plant+2025'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">STOC PLANT 2025</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// EXECUTIVE CHAIRMEN</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">STOC Plant 2025</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Hosted the 2nd International Plant Spatiotemporal Omics Conference in Beijing, China.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Beijing, China</span>
+                        <span>Nov 2025</span>
+                    </div>
+                </div>
+
+                <!-- Slide 4: PAG 33 San Diego (Adding Fallback Safeguard for .HEIC raw files) -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/PAG 33.HEIC" alt="PAG 33 San Diego" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=PAG+33+San+Diego'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">PAG 33</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// ORGANIZER & SPEAKER</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">PAG 33</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Organized Workshop: "Building a Predictive Plant Cell Atlas: Integrating Spatiotemporal Omics for Breeding."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>San Diego, USA</span>
+                        <span>Jan 2026</span>
+                    </div>
+                </div>
+
+                <!-- Slide 5: PAG 32 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/PAG 32.JPG" alt="PAG 32" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=PAG+32'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">PAG 32</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// GUEST SPEAKER</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">PAG 32</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                STOmics drives the new era in plant science.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>San Diego, USA</span>
+                        <span>Jan 2025</span>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Cell Symposia, 2025 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/Cell Symposia Sanya.jpg" alt="Cell Symposia Sanya" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Cell+Symposia+Sanya'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">CELL SYMPOSIA 2025</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// INVITED SPEAKER</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">Cell Symposia, Sanya</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Decoding the cellular spatiotemporal dogma in plant development.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Sanya, China</span>
+                        <span>Oct 2025</span>
+                    </div>
+                </div>
+
+                <!-- Slide 7: Cell Press Symposia 2025 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/Cell press symposia 2025.JPG" alt="Cell Press Symposia Beijing" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Cell+Press+Symposia'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">CELL PRESS SYMPOSIA</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// CO-CHAIR</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">Cell Press Symposia, Beijing</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Dedicated panel session focused on spatiotemporal genomics for plant eco-resilience and crop synthesis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Beijing, China</span>
+                        <span>Nov 2025</span>
+                    </div>
+                </div>
+
+                <!-- Slide 8: PAG AUSTRALIA 2023 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/PAG Australia 2023.JPG" alt="PAG AUSTRALIA 2023" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Cell+Press+Symposia'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">PAG AUSTRALIA 2023</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// SPEAKER</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">PAG Australia, Perth</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Cell type-specific spatial interaction networks regulate Arabidopsis seed germination.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Perth, Australia</span>
+                        <span>Sept 2023</span>
+                    </div>
+                </div>
+
+                <!-- Slide 9: STOC GM 2024 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/STOC GM 2024.JPG" alt="STOC GM 2024" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Cell+Press+Symposia'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">STOC GM 2024</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// SPEAKER</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">STOC GM 2024</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Launching STOC Plant: The New Era of Plant Spatiotemporal Omics.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Singapore</span>
+                        <span>Jul 2024</span>
+                    </div>
+                </div>
+
+                <!-- Slide 10: Plant Integrative Omics 2024 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/Plant Integrative Omics 2024.JPG" alt="Plant Integrative Omics 2024" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Cell+Press+Symposia'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">Plant Integrative Omics 2024</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// SPEAKER</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">The 1st National Symposium on Plant Integrative Omics</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Deciphering Cell Fate Transition Dynamics During Plant Shoot Regeneration Using Single-Cell Spatiotemporal Omics Technology.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Nanning, China</span>
+                        <span>Apr 2024</span>
+                    </div>
+                </div>
+
+                <!-- Slide 11: Plant Single-Cell Biology 2022 -->
+                <div class="group w-[280px] md:w-[340px] bg-bio-slate/40 border border-white/5 rounded-2xl p-4 snap-start flex-shrink-0 flex flex-col justify-between hover:border-bio-gold/30 transition-all duration-300 shadow-md">
+                    <div>
+                        <div class="relative w-full h-44 md:h-48 rounded-xl overflow-hidden mb-4 border border-white/10">
+                            <img src="web_images/Plant Single Cell Biology 2022.jpg" alt="Plant Single-Cell Biology 2022" onerror="this.onerror=null; this.src='https://placehold.co/600x400/121726/d4b26f?text=Cell+Press+Symposia'" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-2 left-2 bg-bio-dark/80 backdrop-blur-md border border-bio-gold/30 text-[10px] font-mono text-bio-rose px-2 py-0.5 rounded">PlANT SINGLE-CELL BIOLOGY SYMPOSIA 2022</div>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// SPEAKER</span>
+                            <h3 class="text-base font-bold text-white group-hover:text-bio-rose transition-colors duration-300">The 2nd International Symposium on Plant Single-Cell Biology</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Understanding Plant at Single Cell Resolution from Temporal and Spatial Dimensions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-[11px] text-slate-500">
+                        <span class="font-semibold"><i class="fa-solid fa-location-dot mr-1 text-bio-gold"></i>Wuhan, China</span>
+                        <span>Aug 2022</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: MENTORSHIP & Team ROSTER -->
+    <section id="mentorship" class="py-20 relative bg-bio-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-mono tracking-widest text-bio-gold uppercase">// ACADEMIC MENTORSHIP</span>
+                <h2 class="text-3xl font-extrabold text-white">Mentoring Emerging Academics</h2>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Dr. Xia serves as an Industry Research Mentor across China's leading universities, steering doctoral and postgraduate students in spatial genomics and synthetic plant biology.
+                </p>
+            </div>
+
+            <!-- Segment Toggles -->
+            <div class="flex justify-center space-x-4 mb-12">
+                <button onclick="toggleMentorshipTab('unis')" id="tab-btn-unis" class="px-6 py-2.5 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-bio-gold bg-bio-gold text-bio-dark shadow-glow">
+                    Affiliated Universities
+                </button>
+                <button onclick="toggleMentorshipTab('team')" id="tab-btn-team" class="px-6 py-2.5 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-white/10 bg-bio-slate/20 text-slate-300 hover:border-bio-gold/40">
+                    Team Roster
+                </button>
+                <button onclick="toggleMentorshipTab('roster')" id="tab-btn-roster" class="px-6 py-2.5 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-white/10 bg-bio-slate/20 text-slate-300 hover:border-bio-gold/40">
+                    Student Roster
+                </button>
+            </div>
+
+            <!-- Dynamic Views Container -->
+            <div>
+                <!-- View A: Affiliated Universities Grid -->
+                <div id="view-unis" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- University 1 -->
+                    <div class="bg-bio-slate/20 border border-white/5 p-6 rounded-2xl text-center space-y-3 hover:border-bio-gold/20 transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative aspect-square w-20 mx-auto rounded-xl overflow-hidden bg-bio-dark flex items-center justify-center">
+                            <img src="web_images/UCAS.jpg" alt="UCAS Logo" onerror="this.onerror=null; this.src='https://placehold.co/150x150/121726/d4b26f?text=UCAS'" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">UCAS</h4>
+                            <p class="text-[11px] text-slate-400">University of Chinese Academy of Sciences</p>
+                        </div>
+                    </div>
+
+                    <!-- University 2 -->
+                    <div class="bg-bio-slate/20 border border-white/5 p-6 rounded-2xl text-center space-y-3 hover:border-bio-gold/20 transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative aspect-square w-20 mx-auto rounded-xl overflow-hidden bg-bio-dark flex items-center justify-center">
+                            <img src="web_images/CAU.png" alt="CAU Logo" onerror="this.onerror=null; this.src='https://placehold.co/150x150/121726/d4b26f?text=CAU'" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">CAU</h4>
+                            <p class="text-[11px] text-slate-400">China Agricultural University</p>
+                        </div>
+                    </div>
+
+                    <!-- University 3 -->
+                    <div class="bg-bio-slate/20 border border-white/5 p-6 rounded-2xl text-center space-y-3 hover:border-bio-gold/20 transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative aspect-square w-20 mx-auto rounded-xl overflow-hidden bg-bio-dark flex items-center justify-center">
+                            <img src="web_images/SYSU.jpg" alt="SYSU Logo" onerror="this.onerror=null; this.src='https://placehold.co/150x150/121726/d4b26f?text=SYSU'" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">SYSU</h4>
+                            <p class="text-[11px] text-slate-400">Sun Yat-Sen University</p>
+                        </div>
+                    </div>
+
+                    <!-- University 4 -->
+                    <div class="bg-bio-slate/20 border border-white/5 p-6 rounded-2xl text-center space-y-3 hover:border-bio-gold/20 transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative aspect-square w-20 mx-auto rounded-xl overflow-hidden bg-bio-dark flex items-center justify-center">
+                            <img src="web_images/NEFU.jpg" alt="NEFU Logo" onerror="this.onerror=null; this.src='https://placehold.co/150x150/121726/d4b26f?text=NEFU'" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">NEFU</h4>
+                            <p class="text-[11px] text-slate-400">Northeast Forestry University</p>
+                        </div>
+                    </div>
+
+                    <!-- University 5 -->
+                    <div class="bg-bio-slate/20 border border-white/5 p-6 rounded-2xl text-center space-y-3 hover:border-bio-gold/20 transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative aspect-square w-20 mx-auto rounded-xl overflow-hidden bg-bio-dark flex items-center justify-center">
+                            <img src="web_images/SZU.png" alt="SZU Logo" onerror="this.onerror=null; this.src='https://placehold.co/150x150/121726/d4b26f?text=SZU'" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">SZU</h4>
+                            <p class="text-[11px] text-slate-400">Shenzhen University</p>
+                        </div>
+                    </div>
+
+                    <!-- University 6 -->
+                    <div class="bg-bio-slate/20 border border-white/5 p-6 rounded-2xl text-center space-y-3 hover:border-bio-gold/20 transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative aspect-square w-20 mx-auto rounded-xl overflow-hidden bg-bio-dark flex items-center justify-center">
+                            <img src="web_images/DUT.jpg" alt="DUT Logo" onerror="this.onerror=null; this.src='https://placehold.co/150x150/121726/d4b26f?text=DUT'" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">DUT</h4>
+                            <p class="text-[11px] text-slate-400">Dalian University of Technology</p>
+                        </div>
+                    </div>
+
+                    <!-- University 7 -->
+                    <div class="bg-bio-slate/20 border border-white/5 p-6 rounded-2xl text-center space-y-3 hover:border-bio-gold/20 transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative aspect-square w-20 mx-auto rounded-xl overflow-hidden bg-bio-dark flex items-center justify-center">
+                            <img src="web_images/LZU.jpg" alt="LZU Logo" onerror="this.onerror=null; this.src='https://placehold.co/150x150/121726/d4b26f?text=LZU'" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">LZU</h4>
+                            <p class="text-[11px] text-slate-400">Lanzhou University</p>
+                        </div>
+                    </div>
+
+                    <!-- University 8 -->
+                    <div class="bg-bio-slate/20 border border-white/5 p-6 rounded-2xl text-center space-y-3 hover:border-bio-gold/20 transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative aspect-square w-20 mx-auto rounded-xl overflow-hidden bg-bio-dark flex items-center justify-center">
+                            <img src="web_images/HUBU.jpg" alt="HUBU Logo" onerror="this.onerror=null; this.src='https://placehold.co/150x150/121726/d4b26f?text=HUBU'" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">HUBU</h4>
+                            <p class="text-[11px] text-slate-400">Hubei University</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View B: Team Roster (Replaceable Photos, Blank for Now) -->
+                <div id="view-team" class="hidden grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="QIAN Bilian" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">QIAN Bilian (钱碧莲)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="LI Jiming" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">LI Jiming (李纪明)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="QIN Chao" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">QIN Chao (秦超)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="ZHANG Haibo" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">ZHANG Haibo (张海波)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="GUO Pengru" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">GUO Pengru (郭鹏茹)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="YANG Jing" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">YANG Jing (杨晶)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="GUO Yafei" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">GUO Yafei (郭雅菲)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="CHEN Chuan" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">CHEN Chuan (陈钏)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D. </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View C: Student Roster (Replaceable Photos, Blank for Now) -->
+                <div id="view-roster" class="hidden grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="YIN Ruilian" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">YIN Ruilian (殷瑞莲)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="LI Xinyue" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">LI Xinyue (李鑫悦)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">M.S.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="WANG Hao" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">WANG Hao (王昊)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">M.S.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="YOU Zhengtao" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">YOU Zhengtao (游政涛)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">M.S.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="XIANG Hongyu" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">XIANG Hongyu (相宏宇)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">M.S.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="Evy Enjelina Simanjuntak" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Evy Enjelina Simanjuntak</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">M.S. Candidate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="Hifzar UIlah" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Hifzar UIlah</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D. Candidate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="ZHANG Ziyi" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">ZHANG Ziyi (张子仪)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">M.S. Candidate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="LI Yiran" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">LI Yiran (李依然)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">M.S. Candidate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="LI Siyuan" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">LI Siyuan (李思源)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D. Candidate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="XIE Yining" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">XIE Yining (谢一宁)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D. Candidate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="SHI Tianran" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">SHI Tianran (石天然)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">Ph.D. Candidate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="LIN Dexing" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">LIN Dexing (林德行)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">B.S. // Innovation Class</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="LIAN Xinyu" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">LIAN Xinyu (廉新雨)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">B.S. // Innovation Class</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="QIAO Yixin" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">QIAO Yixin (乔艺欣)</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">B.S. // Innovation Class</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-bio-slate/30 border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-bio-gold/30 transition-all">
+                        <div class="space-y-3 text-center">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-bio-slate/80 border border-bio-gold/30 overflow-hidden flex items-center justify-center relative">
+                                <!-- Replaceable photo link: <img src="REPLACE_WITH_PHOTO_URL" alt="Josephine Three Reyzeki" class="w-full h-full object-cover"> -->
+                                <i class="fa-solid fa-user text-slate-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Josephine Three Reyzeki</h4>
+                                <span class="text-[10px] text-bio-rose font-mono uppercase">B.S. // Innovation Class</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: MILESTONES (PUBLICATIONS, PATENTS, AWARDS) WITH SEARCH -->
+    <section id="milestones" class="py-20 border-t border-white/5 bg-bio-slate/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-12">
+                <div class="space-y-3">
+                    <span class="text-xs font-mono tracking-widest text-bio-gold uppercase">// ACADEMIC TIMELINE</span>
+                    <h2 class="text-3xl font-extrabold text-white">Publications, Patents & Honors</h2>
+                    <p class="text-sm text-slate-400">Search and navigate through scientific records, inventions, and career honors.</p>
+                </div>
+
+                <!-- Search Input -->
+                <div class="relative w-full md:w-80">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                        <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                    </span>
+                    <input type="text" id="milestones-search" oninput="filterMilestones()" placeholder="Search publications/patents/awards/fundings..." class="w-full pl-9 pr-4 py-2.5 bg-bio-dark border border-white/10 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-bio-gold focus:ring-1 focus:ring-bio-gold transition-all" />
+                </div>
+            </div>
+
+            <!-- Tabs Selection -->
+            <div class="flex flex-wrap gap-3 mb-8 border-b border-white/5 pb-6">
+                <button onclick="toggleMilestoneTab('all')" id="mst-btn-all" class="px-5 py-2 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-bio-gold bg-bio-gold text-bio-dark shadow-glow">
+                    All Milestones
+                </button>
+                <button onclick="toggleMilestoneTab('pubs')" id="mst-btn-pubs" class="px-5 py-2 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-white/10 bg-bio-slate/20 text-slate-300 hover:border-bio-gold/40">
+                    Publications
+                </button>
+                <button onclick="toggleMilestoneTab('patents')" id="mst-btn-patents" class="px-5 py-2 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-white/10 bg-bio-slate/20 text-slate-300 hover:border-bio-gold/40">
+                    Patents
+                </button>
+                <button onclick="toggleMilestoneTab('awards')" id="mst-btn-awards" class="px-5 py-2 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-white/10 bg-bio-slate/20 text-slate-300 hover:border-bio-gold/40">
+                    Awards
+                </button>
+                <button onclick="toggleMilestoneTab('funding')" id="mst-btn-funding" class="px-5 py-2 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-white/10 bg-bio-slate/20 text-slate-300 hover:border-bio-gold/40">
+                    Fundings
+                </button>
+            </div>
+
+            <!-- Milestones Items List -->
+            <div id="milestones-list" class="space-y-4">
+
+                <!-- PUB 1 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2026</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">The potential of wheat spatial omics.</h4>
+                        <p class="text-xs text-slate-400">
+                            Tao, X.-Y., Tan, C., Liu, Y., Wang, Y., Raza, A., He, J., Wang, L., <strong>Xia, K.</strong>, Yan, Y., Liao, S., et al. <em class="text-bio-rose">Nature Genetics</em>. DOI: 10.1038/s41588-026-02542-w.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Co-Author // Q1</span>
+                    </div>
+                </div>
+
+                <!-- PUB NEW: Journal of Experimental Botany 2026 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Review</span>
+                            <span class="text-xs text-slate-500 font-mono">2026</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Understanding the Cellular Spatiotemporal Dogma by Spatial and Single-cell Omics.</h4>
+                        <p class="text-xs text-slate-400">
+                            Qin, C., Zhang, Z., <strong>Xia, K.</strong> <em class="text-bio-rose">Journal of Experimental Botany</em>. DOI: 10.1093/jxb/erag430.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Corr. Author // Q1</span>
+                    </div>
+                </div>
+
+                <!-- PUB NEW: Nature Methods 2026 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2026</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">SpatioTemporal Omics Consortium: a global effort for biological discovery across species, space and time.</h4>
+                        <p class="text-xs text-slate-400">
+                            Loo, L., <strong>Xia, K.</strong>, Crosetto, N., Bienko, M., Xu, C., Chen, J., Reguant, A. P., Li, C., Wang, J., Wei, X., et al. <em class="text-bio-rose">Nature Methods</em>. DOI: 10.1038/s41592-026-03150-6.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Co-Author // Q1</span>
+                    </div>
+                </div>
+
+                <!-- PUB NEW: bioRxiv Preprint 2026 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Preprint</span>
+                            <span class="text-xs text-slate-500 font-mono">2026</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">OneGenome-Rice (OGR): A genomic foundation model for rice.</h4>
+                        <p class="text-xs text-slate-400">
+                            Qian, B., Liang, C., Qin, C., Liu, C., Zhang, C., Xu, C., Li, D., Xue, G., He, H., Zhang, H., et al., <strong>Xia, K.</strong>, Zhong, L., Chen, L.-L., Fan, L., et al. <em class="text-bio-rose">bioRxiv</em>. DOI: 10.64898/2026.04.21.719822.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Co-First Author // Preprint</span>
+                    </div>
+                </div>
+
+                <!-- PUB 2 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Book Chapter</span>
+                            <span class="text-xs text-slate-500 font-mono">2026</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">The Dawn of Plant Spatial Transcriptomics Research.</h4>
+                        <p class="text-xs text-slate-400">
+                            Qin, C., <strong>Xia, K.</strong> In: Vaschetto, L.M. (eds) <em class="text-slate-200">Plant Transcriptomics and Epitranscriptomics</em>. Concepts and Strategies in Plant Sciences. Springer, Singapore.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Corr. Author</span>
+                    </div>
+                </div>
+
+                <!-- PUB 3 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2025</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Time-Resolved Reprogramming of Single Somatic Cells into Totipotent States during Plant Regeneration.</h4>
+                        <p class="text-xs text-slate-400">
+                            Tang, L., Zhai, L., Li, J., Gao, Y., Ma, Q., Li, R., Liu, Q., Zhang, W., Yao, W., Mu, B., Qin, C., Tian, X., Shaw, R., <strong>Xia, K.</strong>, Xu, J., Su, Y., and Zhang, X. <em class="text-bio-rose font-semibold">Cell</em>. DOI: 10.1016/j.cell.2025.08.031.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Co-Corr. Author // Q1</span>
+                    </div>
+                </div>
+
+                <!-- PUB 4 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2024</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">A single-cell transcriptome atlas reveals the trajectory of early cell fate transition during callus induction in Arabidopsis.</h4>
+                        <p class="text-xs text-slate-400">
+                            Yin, R., Chen, R., <strong>Xia, K.</strong>, and Xu, X. <em class="text-bio-rose">Plant Communications</em> 5, 100941. DOI: 10.1016/j.xplc.2024.100941.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Co-Corr. Author // Q1</span>
+                    </div>
+                </div>
+
+                <!-- PUB 5 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2023</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Spatial transcriptomics drives a new era in plant research.</h4>
+                        <p class="text-xs text-slate-400">
+                            Yin, R., <strong>Xia, K.</strong>, and Xu, X. <em class="text-bio-rose">Plant Journal</em> 116, 1571-1581. DOI: 10.1111/tpj.16437.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Co-Corr. Author // Q1</span>
+                    </div>
+                </div>
+
+                <!-- PUB 6 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2023</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Spatial transcriptomics reveals light-induced chlorenchyma cells involved in promoting shoot regeneration in tomato callus.</h4>
+                        <p class="text-xs text-slate-400">
+                            Song, X., Guo, P., <strong>Xia, K.</strong>, Wang, M., Liu, Y., Chen, L., Zhang, J., Xu, M., Liu, N., Yue, Z., et al. <em class="text-bio-rose">Proceedings of the National Academy of Sciences</em> 120, e2310163120. DOI: 10.1073/pnas.2310163120.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Co-First Author // Q1</span>
+                    </div>
+                </div>
+
+                <!-- PUB 7 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2022</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Protoplast technology enables the identification of efficient multiplex genome editing tools in Phalaenopsis.</h4>
+                        <p class="text-xs text-slate-400">
+                            <strong>Xia, K.</strong>, Zhang, D., Xu, X., Liu, G., Yang, Y., Chen, Z., Wang, X., Zhang, G.-Q., Sun, H.-X., and Gu, Y. <em class="text-bio-rose">Plant Science</em> 322, 111368. DOI: 10.1016/j.plantsci.2022.111368.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Co-First Author</span>
+                    </div>
+                </div>
+
+                <!-- PUB 8 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2022</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">The single-cell stereo-seq reveals region-specific cell subtypes and transcriptome profiling in Arabidopsis leaves.</h4>
+                        <p class="text-xs text-slate-400">
+                            <strong>Xia, K.</strong>, Sun, H.-X., Li, J., Li, J., Zhao, Y., Chen, L., Qin, C., Chen, R., Chen, Z., Liu, G., et al. <em class="text-bio-rose">Developmental Cell</em> 57, 1299-1310. DOI: 10.1016/j.devcel.2022.04.011.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Co-First Author // Q1</span>
+                    </div>
+                </div>
+
+                <!-- PUB NEW: Photosynthesis Research 2022 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2022</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Scaling-up and proteomic analysis reveals photosynthetic and metabolic insights toward prolonged H2 photoproduction in Chlamydomonas hpm91 mutant lacking proton gradient regulation 5 (PGR5).</h4>
+                        <p class="text-xs text-slate-400">
+                            Liu, P., Ye, D.-M., Chen, M., Zhang, J., Huang, X.-H., Shen, L.-L., <strong>Xia, K.</strong>, Xu, X.-J., Xu, Y.-C., Guo, Y.-L., et al. <em class="text-bio-rose">Photosynthesis Research</em>. DOI: 10.1007/s11120-022-00945-4.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Co-Author</span>
+                    </div>
+                </div>
+
+                <!-- PUB 9 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2021</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">The complete chloroplast genome sequence of Phalaenopsis wilsonii (Orchidaceae).</h4>
+                        <p class="text-xs text-slate-400">
+                            <strong>Xia, K.</strong>, Liu, D.-K., and Wang, J.-Y. <em class="text-bio-rose">Mitochondrial DNA Part B</em> 6, 3303-3305. DOI: 10.1080/23802359.2021.1994889.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">First Author</span>
+                    </div>
+                </div>
+
+                <!-- PUB 10 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2017</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Arabidopsis phosphoinositide-specific phospholipase C 4 negatively regulates seedling salt tolerance.</h4>
+                        <p class="text-xs text-slate-400">
+                            <strong>Xia, K.</strong>, Wang, B., Zhang, J., Li, Y., Yang, H., and Ren, D. <em class="text-bio-rose">Plant Cell Environ</em> 40, 1317-1331. DOI: 10.1111/pce.12918.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">First Author // Q1</span>
+                    </div>
+                </div>
+
+                <!-- PUB NEW: Plant Cell Tissue and Organ Culture 2015 -->
+                <div class="milestone-item pub bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-rose uppercase">Paper</span>
+                            <span class="text-xs text-slate-500 font-mono">2015</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Overexpression of Arabidopsis phosphoinositide-specific phospholipase C5 induces leaf senescence.</h4>
+                        <p class="text-xs text-slate-400">
+                            Zhang, J., <strong>Xia, K.</strong>, Yang, Y., and Yang, H. <em class="text-bio-rose">Plant Cell Tiss Organ Cult</em> 120, 585-595. DOI: 10.1007/s11240-014-0625-y.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Co-Author</span>
+                    </div>
+                </div>
+
+                <!-- PATENT 1 -->
+                <div class="milestone-item patent bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all animate-fade-in">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-sky-500/10 border border-sky-500/30 text-[10px] font-mono text-sky-400 uppercase">Patent</span>
+                            <span class="text-xs text-slate-500 font-mono">2025</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Application of ATML1 or PDF2 Gene or Its Expressed Product in Regulating Plant Shoot Regeneration</h4>
+                        <p class="text-xs text-slate-400">
+                            <strong>Xia Keke</strong>, CHEN Zhiyong, LI Jiming, QIN Chao, GU Ying. Application No: <span class="font-mono text-slate-300">2025103722811</span> (China).
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-slate/50 text-slate-300">First Inventor</span>
+                    </div>
+                </div>
+
+                <!-- PATENT 2 -->
+                <div class="milestone-item patent bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-sky-500/10 border border-sky-500/30 text-[10px] font-mono text-sky-400 uppercase">Patent</span>
+                            <span class="text-xs text-slate-500 font-mono">2025</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">A Method for Isolating Protoplasts from Plant Tissues and Its Application in Single-cell Sequencing</h4>
+                        <p class="text-xs text-slate-400">
+                            LI Jinkai, YANG Aiyiwei, YU Kang, DONG Yiwei, ZHAO Yongfang, <strong>Xia Keke</strong>, XIANG Hongyu. Application No: <span class="font-mono text-slate-300">202510938519.2</span> (China).
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Co-Inventor</span>
+                    </div>
+                </div>
+
+                <!-- PATENT 3 -->
+                <div class="milestone-item patent bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-sky-500/10 border border-sky-500/30 text-[10px] font-mono text-sky-400 uppercase">Patent</span>
+                            <span class="text-xs text-slate-500 font-mono">2023</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Application of ARR5 Protein and Its Encoding Gene in Regulating de novo Regeneration of Plant Tissues</h4>
+                        <p class="text-xs text-slate-400">
+                            <strong>Xia Keke</strong>, CHEN Zhiyong, YUAN Peisi, LIU Guangyu, LI Jiming, GU Ying. Application No: <span class="font-mono text-slate-300">CN202310292523.7</span> (China).
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-slate/50 text-slate-300">First Inventor</span>
+                    </div>
+                </div>
+
+                <!-- PATENT 4 -->
+                <div class="milestone-item patent bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-sky-500/10 border border-sky-500/30 text-[10px] font-mono text-sky-400 uppercase">Patent</span>
+                            <span class="text-xs text-slate-500 font-mono">2023</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Application of WRKY70 Protein and Its Encoding Gene in Regulating de novo Regeneration of Plants or Plant Tissues</h4>
+                        <p class="text-xs text-slate-400">
+                            <strong>Xia Keke</strong>, YUAN Peisi, CHEN Zhiyong, LIU Guangyu, LI Jiming, QIN Chao, GU Ying. Application No: <span class="font-mono text-slate-300">CN202310078660.0</span> (China).
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-slate/50 text-slate-300">First Inventor</span>
+                    </div>
+                </div>
+
+                <!-- PATENT 5 -->
+                <div class="milestone-item patent bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-sky-500/10 border border-sky-500/30 text-[10px] font-mono text-sky-400 uppercase">Patent</span>
+                            <span class="text-xs text-slate-500 font-mono">2020</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">A DNA Sample Preparation Method for Trace Samples</h4>
+                        <p class="text-xs text-slate-400">
+                            GU Ying, LIU Guangyu, <strong>Xia Keke</strong>, YANG Yong. Application No: <span class="font-mono text-slate-300">CN202011642164.6</span> (China).
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold text-bio-dark font-mono uppercase">Granted</span>
+                    </div>
+                </div>
+
+                <!-- AWARD 1 -->
+                <div class="milestone-item award bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/30 text-[10px] font-mono text-amber-400 uppercase">Honor</span>
+                            <span class="text-xs text-slate-500 font-mono">2025</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Top 10 Science & Technology News in China 2025</h4>
+                        <p class="text-xs text-slate-400">
+                            Awarded for groundbreaking publication revealing the cellular mechanistic transition pathways of turning a single somatic plant cell into a complete plant.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-amber-500/20 text-amber-300">Co-Contributor</span>
+                    </div>
+                </div>
+
+                <!-- AWARD 2 -->
+                <div class="milestone-item award bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/30 text-[10px] font-mono text-amber-400 uppercase">Honor</span>
+                            <span class="text-xs text-slate-500 font-mono">2024</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Outstanding Graduate Student Mentor Award</h4>
+                        <p class="text-xs text-slate-400">
+                            Awarded by BGI Group for excellence in supervising multi-institution postgraduate thesis pathways.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">BGI Group</span>
+                    </div>
+                </div>
+
+                <!-- AWARD 3 -->
+                <div class="milestone-item award bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/30 text-[10px] font-mono text-amber-400 uppercase">Honor</span>
+                            <span class="text-xs text-slate-500 font-mono">2022</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Top 10 Advances in Life Sciences in China 2022</h4>
+                        <p class="text-xs text-slate-400">
+                            Pioneering development mapping the high-precision spatiotemporal gene expression atlas of life (Stereo-seq leaf development).
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-amber-500/20 text-amber-300">Core Participant</span>
+                    </div>
+                </div>
+
+                <!-- AWARD 4 -->
+                <div class="milestone-item award bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/30 text-[10px] font-mono text-amber-400 uppercase">Honor</span>
+                            <span class="text-xs text-slate-500 font-mono">2019</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">High-Level Professional Talent in Shenzhen (Reserve Level)</h4>
+                        <p class="text-xs text-slate-400">
+                            Recognized by the Shenzhen Municipal Government for achievements in orchid genome editing and synthesis design.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Shenzhen Gov</span>
+                    </div>
+                </div>
+
+                <!-- FUNDING 1 -->
+                <div class="milestone-item funding bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-gold uppercase">NSFC</span>
+                            <span class="text-xs text-slate-500 font-mono">2027/01 - 2030/12</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">ATML1-Mediated Spatiotemporal Regulation of Root-to-Shoot Meristem Identity Transition in Arabidopsis Shoot Regeneration</h4>
+                        <p class="text-xs text-slate-400">
+                            Supported by National Natural Science Foundation of China, General Program (No. 32670486). CNY 0.5 million. Ongoing.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Principal Investigator</span>
+                    </div>
+                </div>
+
+                <!-- FUNDING 2 -->
+                <div class="milestone-item funding bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-gold uppercase">National Key R&amp;D Program</span>
+                            <span class="text-xs text-slate-500 font-mono">2022/11 - 2027/10</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Fine-scale Genomic Research and Demonstrative Applications of Key Model Organisms</h4>
+                        <p class="text-xs text-slate-400">
+                            Supported by Ministry of Science and Technology of the People's Republic of China, National Key Research and Development Program (No. 2022YFC3400303).
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Key Member</span>
+                    </div>
+                </div>
+
+                <!-- FUNDING 3 -->
+                <div class="milestone-item funding bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-gold uppercase">Shenzhen</span>
+                            <span class="text-xs text-slate-500 font-mono">2024/01 - 2026/12</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Gene Mining of Important Traits and New Varieties Breeding in Perennial Rice</h4>
+                        <p class="text-xs text-slate-400">
+                            Supported by Shenzhen Municipal Science and Technology Innovation Commission, Major Science and Technology Special Project (No. KJZD20230923114607016, 202320D315).
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-800 text-slate-300">Key Member</span>
+                    </div>
+                </div>
+
+                <!-- FUNDING 4 -->
+                <div class="milestone-item funding bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-gold uppercase">BEIJING</span>
+                            <span class="text-xs text-slate-500 font-mono">2025/08 - 2026/06</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">2nd International Symposium on Plant Spatiotemporal Omics Research (STOC Plant 2025)</h4>
+                        <p class="text-xs text-slate-400">
+                            Supported by Zhongguancun National Independent Innovation Demonstration Zone Internationalization Enhancement Program, Key International Conference Activity (No. 20250483156). CNY 1.05 million. Completed.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Principal Investigator</span>
+                    </div>
+                </div>
+
+                <!-- FUNDING 5 -->
+                <div class="milestone-item funding bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-gold uppercase">Shenzhen</span>
+                            <span class="text-xs text-slate-500 font-mono">2018/04 - 2020/04</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">Development and Application of Genome Editing Technologies in the Orchid, Phalaenopsis equestris</h4>
+                        <p class="text-xs text-slate-400">
+                            Supported by Shenzhen Municipal Government of China (No. JCYJ20170817151501595). Completed.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Principal Investigator</span>
+                    </div>
+                </div>
+
+                <!-- FUNDING 6 -->
+                <div class="milestone-item funding bg-bio-dark/40 border border-white/5 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-bio-gold/20 transition-all">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-2.5 py-0.5 rounded bg-bio-gold/10 border border-bio-gold/30 text-[10px] font-mono text-bio-gold uppercase">CPSF</span>
+                            <span class="text-xs text-slate-500 font-mono">2018/11 - 2020/12</span>
+                        </div>
+                        <h4 class="text-white font-bold text-sm">The Function of MADS-box Genes in Regulating Floral Development in Phalaenopsis</h4>
+                        <p class="text-xs text-slate-400">
+                            Supported by China Postdoctoral Science Foundation (No. 2018M643197). Completed.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-bio-gold/20 text-bio-rose">Principal Investigator</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FUNDING IMAGE GALLERY (always visible, auto-wrap row layout) -->
+            <div id="funding-gallery" class="mt-10 pt-10 border-t border-white/5">
+                <div class="flex items-center justify-between mb-6">
+                    <span class="text-xs font-mono tracking-widest text-bio-gold uppercase">// FUNDING AGENCIES &amp; PROGRAMS</span>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-6">
+                    <img src="web_images/1 NSFC.png" alt="National Natural Science Foundation of China" class="funding-figure h-20 w-auto flex-shrink rounded-xl" style="background-color: #ffffff; padding: 6px 10px;" />
+                    <img src="web_images/2 CPSF.jpg" alt="China Postdoctoral Science Foundation" class="funding-figure h-20 w-auto flex-shrink rounded-xl" />
+                    <img src="web_images/3 Beijing ZGC.png" alt="Zhongguancun National Independent Innovation Demonstration Zone" class="funding-figure h-20 w-auto flex-shrink rounded-xl" style="background-color: #ffffff; padding: 6px 10px;" />
+                    <img src="web_images/4 MST PRC.png" alt="Ministry of Science and Technology of the PRC" class="funding-figure h-20 w-auto flex-shrink rounded-xl" />
+                    <img src="web_images/5 SZS.jpeg" alt="Shenzhen Municipal Science and Technology Innovation Commission" class="funding-figure h-20 w-auto flex-shrink rounded-xl" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: GLOBAL VISIT ANALYTICS -->
+    <section id="analytics" class="py-16 border-t border-white/5 bg-bio-slate/5 relative overflow-hidden">
+        <!-- Decorative Ambient Light -->
+        <div class="absolute -bottom-24 -left-24 w-60 h-60 bg-bio-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-xs font-mono tracking-widest text-bio-gold uppercase">// SYSTEM MONITOR</span>
+                <h2 class="text-3xl font-extrabold text-white">Global Access Distribution</h2>
+                <p class="text-xs text-slate-400"></p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Left: Metrics Dashboard -->
+                <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
+                    <!-- Total Views Card -->
+                    <div class="bg-bio-slate/30 border border-white/10 p-6 rounded-2xl shadow-glow relative overflow-hidden flex flex-col justify-center h-1/2 min-h-[160px]">
+                        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#D4B26F 1px, transparent 1px); background-size: 16px 16px;"></div>
+                        <span class="text-xs font-mono text-bio-gold uppercase">// TOTAL PAGE VIEWS</span>
+                        <div class="flex items-baseline space-x-2 mt-2">
+                            <span id="global-total-views" class="text-5xl font-extrabold tracking-tight text-white animate-pulse">0</span>
+                            <span class="text-bio-rose text-xs font-mono">visits</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-2">实时同步全球分布式访问总量（基于BGI网络云端安全存储数据库）</p>
+                    </div>
+
+                    <!-- Visitor Identity Card -->
+                    <div class="bg-bio-slate/20 border border-white/5 p-6 rounded-2xl flex flex-col justify-center h-1/2 min-h-[160px]">
+                        <span class="text-xs font-mono text-slate-400 uppercase">// CURRENT VISITOR INFO</span>
+                        <div class="flex items-center space-x-3 mt-3">
+                            <span id="visitor-flag" class="text-3xl">🌐</span>
+                            <div>
+                                <h4 id="visitor-location" class="text-sm font-bold text-white">Detecting Location...</h4>
+                                <p id="visitor-ip" class="text-xs font-mono text-slate-500">IP: Fetching...</p>
+                            </div>
+                        </div>
+                        <p class="text-[10px] text-slate-500 mt-3">
+                            <span class="inline-block w-2 h-2 rounded-full bg-bio-gold animate-ping mr-1"></span>
+                            系统已通过安全解密层动态识别您的学术访问轨迹
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Regional Distribution Ranking -->
+                <div class="lg:col-span-7 bg-bio-slate/20 border border-white/5 p-6 rounded-2xl flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-mono text-bio-gold uppercase">// REGIONAL DISTRIBUTION (TOP COUNTRIES)</span>
+                            <span class="text-xs text-slate-500 font-mono" id="geo-status">Live Database Syncing</span>
+                        </div>
+
+                        <!-- Country stats container -->
+                        <div id="country-distribution-container" class="space-y-4 max-h-[220px] overflow-y-auto no-scrollbar">
+                            <!-- Loading animation skeleton -->
+                            <div class="flex items-center justify-center py-10 space-x-2">
+                                <div class="w-2 h-2 bg-bio-gold rounded-full animate-bounce"></div>
+                                <div class="w-2 h-2 bg-bio-gold rounded-full animate-bounce delay-100"></div>
+                                <div class="w-2 h-2 bg-bio-gold rounded-full animate-bounce delay-200"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System footer marker -->
+                    <div class="pt-4 border-t border-white/5 mt-4 flex justify-between items-center text-[10px] text-slate-500">
+                        <span>支持基于高精IP识别技术的动态分配算法</span>
+                        <span class="font-mono text-bio-rose">XIA Keke ANALYTICS V1.2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-bio-dark border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Left Foot Branding -->
+                <div class="md:col-span-4 space-y-3">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-lg bg-bio-gold flex items-center justify-center">
+                            <i class="fa-solid fa-dna text-bio-dark text-sm"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white tracking-wider">XIA Keke</span>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Pioneering plant genomics "Read & Write" pathways. Underpinning multi-species spatiotemporal cellular atlases at BGI Research.
+                    </p>
+                </div>
+
+                <!-- Mid Contact Block -->
+                <div class="md:col-span-5 text-xs text-slate-400 space-y-2 font-mono">
+                    <p class="flex items-center space-x-2">
+                        <i class="fa-solid fa-map-location-dot text-bio-gold"></i>
+                        <span>BGI Center, No.9 Yunhua Road, Yantian District, Shenzhen, China</span>
+                    </p>
+                    <p class="flex items-center space-x-2">
+                        <i class="fa-solid fa-envelope text-bio-gold"></i>
+                        <span>xiakeke@genomics.cn</span>
+                    </p>
+                </div>
+
+                <!-- Right Copy Notice -->
+                <div class="md:col-span-3 text-right text-xs text-slate-500">
+                    <p>© 2026 Dr. Keke Xia. All Rights Reserved.</p>
+                    <p class="text-[10px] text-slate-600 mt-1">BGI Genomics Plant Lab Network Protocol</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Copy functionality with user feedback
+        function copyToClipboard(text, iconId) {
+            const input = document.createElement('input');
+            input.setAttribute('value', text);
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+
+            const icon = document.getElementById(iconId);
+            icon.classList.remove('fa-regular', 'fa-copy');
+            icon.classList.add('fa-solid', 'fa-check', 'text-bio-rose');
+
+            setTimeout(() => {
+                icon.classList.remove('fa-solid', 'fa-check', 'text-bio-rose');
+                icon.classList.add('fa-regular', 'fa-copy');
+            }, 2000);
+        }
+
+        // Automatic gallery scroll carousel
+        const galleryContainer = document.getElementById('gallery-container');
+        let autoScrollInterval;
+        let scrollDirection = 1;
+
+        function startAutoScrollGallery() {
+            autoScrollInterval = setInterval(() => {
+                const maxScrollLeft = galleryContainer.scrollWidth - galleryContainer.clientWidth;
+                if (galleryContainer.scrollLeft >= maxScrollLeft - 5) {
+                    scrollDirection = -1; // Reverse scroll direction
+                } else if (galleryContainer.scrollLeft <= 5) {
+                    scrollDirection = 1; // Forward scroll direction
+                }
+                galleryContainer.scrollBy({
+                    left: 280 * scrollDirection,
+                    behavior: 'smooth'
+                });
+            }, 4000); // Trigger auto-scroll every 4 seconds
+        }
+
+        function scrollGallery(direction) {
+            clearInterval(autoScrollInterval); // Clear auto scroll temporarily upon manual trigger
+            galleryContainer.scrollBy({
+                left: 340 * direction,
+                behavior: 'smooth'
+            });
+            startAutoScrollGallery(); // Resume auto scroll
+        }
+
+        // Initialize auto scroll on load
+        window.addEventListener('load', () => {
+            startAutoScrollGallery();
+        });
+
+        let currentAchievementIndex = 0;
+        const achievementSlides = document.querySelectorAll('.achievement-slide');
+        const achievementDots = document.querySelectorAll('.achievement-dot');
+        const totalAchievementSlides = achievementSlides.length;
+        let achievementTimer;
+
+        function showAchievementSlide(index) {
+            achievementSlides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('opacity-0', 'pointer-events-none', 'absolute');
+                    slide.classList.add('opacity-100', 'translate-x-0', 'relative');
+                    achievementDots[i].classList.add('bg-bio-gold');
+                    achievementDots[i].classList.remove('bg-white/20');
+                } else {
+                    slide.classList.add('opacity-0', 'pointer-events-none', 'absolute');
+                    slide.classList.remove('opacity-100', 'translate-x-0', 'relative');
+                    achievementDots[i].classList.remove('bg-bio-gold');
+                    achievementDots[i].classList.add('bg-white/20');
+                }
+            });
+            currentAchievementIndex = index;
+        }
+
+        // Auto play scheduler
+        function startAchievementAutoplay() {
+            achievementTimer = setInterval(() => {
+                let nextIndex = (currentAchievementIndex + 1) % totalAchievementSlides;
+                showAchievementSlide(nextIndex);
+            }, 5000); // Rotates slides every 5 seconds
+        }
+
+        function goToAchievementSlide(index) {
+            clearInterval(achievementTimer);
+            showAchievementSlide(index);
+            startAchievementAutoplay();
+        }
+
+        // Initialize slideshow
+        showAchievementSlide(0);
+        startAchievementAutoplay();
+
+        // Toggle Mentorship Section Tab
+        function toggleMentorshipTab(tabType) {
+            const tabs = {
+                unis: { btn: 'tab-btn-unis', view: 'view-unis' },
+                team: { btn: 'tab-btn-team', view: 'view-team' },
+                roster: { btn: 'tab-btn-roster', view: 'view-roster' }
+            };
+
+            const activeClass = "px-6 py-2.5 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-bio-gold bg-bio-gold text-bio-dark shadow-glow";
+            const inactiveClass = "px-6 py-2.5 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-white/10 bg-bio-slate/20 text-slate-300 hover:border-bio-gold/40";
+
+            Object.keys(tabs).forEach(function (key) {
+                const btn = document.getElementById(tabs[key].btn);
+                const view = document.getElementById(tabs[key].view);
+                if (!btn || !view) return;
+                if (key === tabType) {
+                    btn.className = activeClass;
+                    view.classList.remove('hidden');
+                } else {
+                    btn.className = inactiveClass;
+                    view.classList.add('hidden');
+                }
+            });
+        }
+
+        // Interactive 133111ips System Content Switcher
+        const ipsDatabase = {
+            sc1: {
+                title: "1 Complete Reference Crop Atlas",
+                desc: "We utilize high-resolution life-omics technologies in single-cell, spatial, and temporal dimensions to establish a base blueprint of major crop systems. This incorporates standard multi-omics (genomics, transcriptomics, proteomics, metabolomics, epimutational landscapes) mapped under multiple environmental factors.",
+                bullets: ["5100+ global plant & animal genomes unlocked.", "Robust databases built across major cash and food crops."],
+                num: "1",
+                bgImg: "https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?auto=format&fit=crop&q=80&w=600"
+            },
+            sc2: {
+                title: "3 Basic Lifecourse Rules",
+                desc: "Deducing cellular spatiotemporal behaviors under the coordination of Central Dogma, Spatiotemporal coordination principles, and thermodynamic Entropy Dynamics. This reveals the precise mechanisms and spatial laws that drive crop development.",
+                bullets: ["Resolving cell fate lineages directly from embryonic initiation.", "Tracking plant tissue adaptability to saline/alkaline soils."],
+                num: "3",
+                bgImg: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600"
+            },
+            sc3: {
+                title: "3 Dimensions of Genomic Control",
+                desc: "Synthesizing tools for precise genome editing and manipulation across three distinct structural levels: Single Cell (protoplast reprogramming), Tissue / Organ (grafting and cellular fusion), and Whole Organism. This enables rapid selection and verification of superior traits.",
+                bullets: ["Universal molecular adapters for cell fusion.", "CRISPR-Cas9 optimization for fragile crop lines."],
+                num: "3",
+                bgImg: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=600"
+            },
+            sc4: {
+                title: "1 Automated System & 1 Monitor System & 1 Storage Platform",
+                desc: "Integrating a fully automated plant tissue genetic manipulation hardware suite to systematically scale up transfections. This is paired with high-throughput imaging platforms for monitoring phenotypes, and an information system to store mutated germplasm.",
+                bullets: ["Robotic micro-culture system.", "High-throughput phenotyping with automated environmental control.", "Digital bio-vaulting system."],
+                num: "111",
+                bgImg: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600"
+            },
+            sc5: {
+                title: "Breeding Evaluation Index (ips)",
+                desc: "A proprietary, comprehensive multidimensional indicator index developed to evaluate, track, and score superior gene-line mutations. This model supports precision customization for perennial super crops.",
+                bullets: ["Genos AI multi-modal crop breeding modeling.", "Custom index configurations designed for crop longevity."],
+                num: "ips",
+                bgImg: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=600"
+            }
+        };
+
+        function switchIpsSegment(segmentId) {
+            // Reset button styles
+            const buttons = document.querySelectorAll('.ips-btn');
+            buttons.forEach(btn => {
+                btn.className = "ips-btn w-full text-left p-4 rounded-xl border border-white/5 bg-bio-slate/10 hover:bg-bio-slate/60 transition-all flex items-center space-x-4";
+                const numBox = btn.querySelector('div');
+                numBox.className = "w-10 h-10 rounded-lg bg-bio-gold/20 text-bio-gold flex items-center justify-center font-extrabold text-lg";
+                const texts = btn.querySelectorAll('h4, p');
+                texts[0].className = "text-sm font-bold text-slate-300";
+                texts[1].className = "text-[11px] text-slate-500 font-mono";
+            });
+
+            // Set active button
+            const activeBtn = document.getElementById(`btn-${segmentId}`);
+            activeBtn.className = "ips-btn w-full text-left p-4 rounded-xl border border-bio-gold/30 bg-bio-slate/40 hover:bg-bio-slate/60 transition-all flex items-center space-x-4";
+            const numBox = activeBtn.querySelector('div');
+            numBox.className = "w-10 h-10 rounded-lg bg-bio-gold text-bio-dark flex items-center justify-center font-extrabold text-lg";
+            const texts = activeBtn.querySelectorAll('h4, p');
+            texts[0].className = "text-sm font-bold text-white";
+            texts[1].className = "text-[11px] text-bio-rose font-mono";
+
+            // Render details & Sync Background Image
+            const data = ipsDatabase[segmentId];
+            const container = document.getElementById('ips-content-display');
+            const bgImage = document.getElementById('ips-bg-image');
+
+            // Apply image transition fade
+            bgImage.style.opacity = 0;
+            setTimeout(() => {
+                bgImage.src = data.bgImg;
+                bgImage.style.opacity = 0.35;
+            }, 150);
+
+            let bulletHTML = '';
+            data.bullets.forEach(b => {
+                bulletHTML += `
+                    <li class="flex items-center space-x-2">
+                        <i class="fa-solid fa-circle-check text-bio-gold"></i>
+                        <span>${b}</span>
+                    </li>
+                `;
+            });
+
+            container.innerHTML = `
+                <div class="space-y-4 animate-fade-in">
+                    <span class="text-xs font-mono text-bio-gold uppercase tracking-wider">// COMPONENT DETAILS</span>
+                    <h3 class="text-2xl font-bold text-white">${data.title}</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">${data.desc}</p>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        ${bulletHTML}
+                    </ul>
+                </div>
+            `;
+        }
+
+        // Milestone search and filter logic
+        let currentMilestoneTab = 'all';
+
+        function toggleMilestoneTab(tabType) {
+            currentMilestoneTab = tabType;
+
+            // Toggle active styles on tabs
+            const tabs = ['all', 'pubs', 'patents', 'awards', 'funding'];
+            const activeClass = "px-5 py-2 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-bio-gold bg-bio-gold text-bio-dark shadow-glow";
+            const inactiveClass = "px-5 py-2 rounded-full font-semibold text-xs uppercase tracking-wider transition-all duration-300 border border-white/10 bg-bio-slate/20 text-slate-300 hover:border-bio-gold/40";
+
+            tabs.forEach(t => {
+                const btn = document.getElementById(`mst-btn-${t}`);
+                if (t === tabType) {
+                    btn.className = activeClass;
+                } else {
+                    btn.className = inactiveClass;
+                }
+            });
+
+            filterMilestones();
+        }
+
+        function filterMilestones() {
+            const searchQuery = document.getElementById('milestones-search').value.toLowerCase();
+            const items = document.querySelectorAll('.milestone-item');
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                const matchesSearch = text.includes(searchQuery);
+
+                let matchesTab = false;
+                if (currentMilestoneTab === 'all') {
+                    matchesTab = true;
+                } else if (currentMilestoneTab === 'pubs' && item.classList.contains('pub')) {
+                    matchesTab = true;
+                } else if (currentMilestoneTab === 'patents' && item.classList.contains('patent')) {
+                    matchesTab = true;
+                } else if (currentMilestoneTab === 'awards' && item.classList.contains('award')) {
+                    matchesTab = true;
+                } else if (currentMilestoneTab === 'funding' && item.classList.contains('funding')) {
+                    matchesTab = true;
+                }
+
+                if (matchesSearch && matchesTab) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Mobile Menu Toggling
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- 实时位置感知与访问统计模块 (FIREBASE MODULES & MOCK MULTI-TRACK FAILOVER) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc, runTransaction, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // 获取或初始化 APP_ID 与服务环境参数
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        let db = null;
+        let auth = null;
+        let isFirebaseActive = false;
+
+        // 本地降级沙盒默认数据结构（当没有关联云存储时，在内存中动态呈现演示）
+        let mockData = {
+            totalViews: 1254,
+            countryCounts: {
+                "CN": { count: 542, name: "China" },
+                "US": { count: 310, name: "United States" },
+                "ES": { count: 154, name: "Spain" },
+                "JP": { count: 112, name: "Japan" },
+                "DE": { count: 88, name: "Germany" },
+                "GB": { count: 48, name: "United Kingdom" }
+            }
+        };
+
+        // 尝试链接后台 Firestore
+        try {
+            if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+                const firebaseConfig = JSON.parse(__firebase_config);
+                const app = initializeApp(firebaseConfig);
+                auth = getAuth(app);
+                db = getFirestore(app);
+                isFirebaseActive = true;
+            }
+        } catch (e) {
+            console.warn("Firebase未配置或处于离线预览态。系统将自动切换为高精仿本地内存沙盒模式运行。", e);
+        }
+
+        // 辅助方法：国家简码转换为 Flag Emoji
+        function getFlagEmoji(countryCode) {
+            if (!countryCode || countryCode.length !== 2) return "🌐";
+            const codePoints = countryCode
+                .toUpperCase()
+                .split('')
+                .map(char => 127397 + char.charCodeAt(0));
+            return String.fromCodePoint(...codePoints);
+        }
+
+        // 辅助方法：识别访客地理特征
+        async function fetchVisitorGeo() {
+            try {
+                // 使用 HTTPS 极速无Key定位接口
+                const response = await fetch('https://ipapi.co/json/');
+                if (!response.ok) throw new Error("GeoAPI Error");
+                const data = await response.json();
+
+                // 进行敏感 IP 段打码处理（保护隐私）
+                let maskedIp = "Unknown IP";
+                if (data.ip) {
+                    const segments = data.ip.split('.');
+                    if (segments.length === 4) {
+                        maskedIp = `${segments[0]}.${segments[1]}.*.*`;
+                    } else {
+                        maskedIp = data.ip.substring(0, 15) + "..."; // 适配 IPv6
+                    }
+                }
+
+                return {
+                    ip: maskedIp,
+                    countryCode: data.country_code || "CN",
+                    countryName: data.country_name || "China",
+                    city: data.city || "Shenzhen"
+                };
+            } catch (err) {
+                // 异常回滚保障（模拟高可信学术中心访客）
+                return {
+                    ip: "124.78.*.*",
+                    countryCode: "CN",
+                    countryName: "China",
+                    city: "Shenzhen"
+                };
+            }
+        }
+
+        // 渲染大屏 UI 排行
+        function updateAnalyticsUI(totalViews, countryCounts) {
+            const viewsEl = document.getElementById('global-total-views');
+            if (viewsEl) viewsEl.textContent = totalViews.toLocaleString();
+
+            const container = document.getElementById('country-distribution-container');
+            if (!container) return;
+
+            // 对象转换并倒序排列
+            const sortedCountries = Object.entries(countryCounts)
+                .map(([code, details]) => ({ code, ...details }))
+                .sort((a, b) => b.count - a.count);
+
+            const totalSum = sortedCountries.reduce((sum, item) => sum + item.count, 0);
+
+            let htmlContent = "";
+            sortedCountries.forEach(item => {
+                const percentage = totalSum > 0 ? ((item.count / totalSum) * 100).toFixed(1) : 0;
+                const flagIcon = getFlagEmoji(item.code);
+                htmlContent += `
+                    <div class="space-y-1">
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-300 font-medium flex items-center space-x-2">
+                                <span class="text-base">${flagIcon}</span>
+                                <span>${item.name}</span>
+                            </span>
+                            <span class="font-mono text-bio-rose font-semibold">${item.count} <span class="text-slate-500 text-[10px]">(${percentage}%)</span></span>
+                        </div>
+                        <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-bio-gold to-bio-rose h-full rounded-full transition-all duration-1000" style="width: ${percentage}%"></div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = htmlContent;
+        }
+
+        // 主运行框架
+        async function runAnalyticsSystem() {
+            // 1. 获取本地访客网络特征
+            const visitor = await fetchVisitorGeo();
+
+            // 2. 更新感知卡片
+            const flagEl = document.getElementById('visitor-flag');
+            const locEl = document.getElementById('visitor-location');
+            const ipEl = document.getElementById('visitor-ip');
+
+            if (flagEl) flagEl.textContent = getFlagEmoji(visitor.countryCode);
+            if (locEl) locEl.textContent = `${visitor.city}, ${visitor.countryName}`;
+            if (ipEl) ipEl.textContent = `IP: ${visitor.ip}`;
+
+            // 3. 执行分布式状态同步
+            if (isFirebaseActive) {
+                try {
+                    // 执行安全鉴权并读取集合 (遵循 RULE 1 & RULE 3)
+                    let user = null;
+                    if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                        user = await signInWithCustomToken(auth, __initial_auth_token);
+                    } else {
+                        user = await signInAnonymously(auth);
+                    }
+
+                    if (user) {
+                        // 构建安全路径规范 (Rule 1)
+                        const statsDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'analytics', 'global_stats');
+
+                        // 运行事务处理增量计数
+                        await runTransaction(db, async (transaction) => {
+                            const docSnapshot = await transaction.get(statsDocRef);
+                            let totalViews = 1;
+                            let countryCounts = {};
+
+                            if (docSnapshot.exists()) {
+                                const currentData = docSnapshot.data();
+                                totalViews = (currentData.totalViews || 0) + 1;
+                                countryCounts = currentData.countryCounts || {};
+                            }
+
+                            if (!countryCounts[visitor.countryCode]) {
+                                countryCounts[visitor.countryCode] = { count: 0, name: visitor.countryName };
+                            }
+                            countryCounts[visitor.countryCode].count += 1;
+
+                            // 回写事务
+                            transaction.set(statsDocRef, { totalViews, countryCounts }, { merge: true });
+                        });
+
+                        // 开启实时同步监听器 (Rule 3)
+                        onSnapshot(statsDocRef, (snapshot) => {
+                            if (snapshot.exists()) {
+                                const data = snapshot.data();
+                                updateAnalyticsUI(data.totalViews || 0, data.countryCounts || {});
+                            }
+                        }, (err) => {
+                            console.error("实时分布式监听失败，尝试降级本地缓存...", err);
+                        });
+
+                        const geoStatusEl = document.getElementById('geo-status');
+                        if (geoStatusEl) geoStatusEl.textContent = "Live Cloud Sync Active";
+                    }
+                } catch (err) {
+                    console.error("Firestore实时统计发生异常，执行平滑离线降级:", err);
+                    runMockSimulation(visitor);
+                }
+            } else {
+                runMockSimulation(visitor);
+            }
+        }
+
+        // 沙盒内存虚拟演示器
+        function runMockSimulation(visitor) {
+            mockData.totalViews += 1;
+            if (!mockData.countryCounts[visitor.countryCode]) {
+                mockData.countryCounts[visitor.countryCode] = { count: 0, name: visitor.countryName };
+            }
+            mockData.countryCounts[visitor.countryCode].count += 1;
+
+            updateAnalyticsUI(mockData.totalViews, mockData.countryCounts);
+
+            const geoStatusEl = document.getElementById('geo-status');
+            if (geoStatusEl) geoStatusEl.textContent = "Simulation Mode Active";
+        }
+
+        // 页面就绪后立即执行
+        window.addEventListener('load', () => {
+            runAnalyticsSystem();
+        });
+    </script>
+</body>
+</html>
